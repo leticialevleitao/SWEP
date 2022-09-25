@@ -31,7 +31,7 @@ Key issue = Poverty (SDG1) and Food Security (SDG2)
 
 Guiding question - 'How can we provide access to information for a better nutritional gain?'
 
-##Project Status
+## Project Status
 Lofi prototype approved with 7 user stories + a new add and in progress to deploy!
 
 ## What does the project accomplish?

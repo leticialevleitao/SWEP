@@ -5,6 +5,8 @@ Tema = Pobreza (ODS1) e Segurança Alimentar (ODS2)
 
 Pergunta norteadora - 'Como podemos ofertar acesso a informações para um melhor ganho nutricional?'
 
+## Status do projeto
+Protótipo lofi aprovado com 7 histórias e a criação de uma 8ª e em andamento para deploy!
 
 ## O que o projeto faz? 
 A aplicação web terá como função a informação de pessoas em vulnerabilidade social e pobreza nutricional, com o intuito de gerar receitas de baixo custo e alto valor nutricional. Diante disso, quem tiver acesso à aplicação web poderá inserir os alimentos que possui em casa e ela irá elaborar receitas práticas e fáceis de construir com componentes simples, mas atingindo a maior capacidade de valor nutricional possível.
@@ -28,6 +30,9 @@ Project related to the class of Software Engineering (Fundamentals of Software D
 Key issue = Poverty (SDG1) and Food Security (SDG2)
 
 Guiding question - 'How can we provide access to information for a better nutritional gain?'
+
+##Project Status
+Lofi prototype approved with 7 user stories + a new add and in progress to deploy!
 
 ## What does the project accomplish?
 The web application will have as a main feature information driven to people in social vulnerability and nutricional poverty, with the main goal to generate low-cost recipes with high nutritional value. Said that, the user who accesses it will be able to insert the ingredients they have at home and it will reply with a practical, simple and easy recipe but with the highest nutritional value as possible.

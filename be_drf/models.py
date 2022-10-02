@@ -17,3 +17,10 @@ class Recipe(models.Model):
 
     def str(self):
         return self.author
+
+class Indicacoes(models.Model):
+    description2 = models.TextField()
+    tipo = models.CharField(max_length=50)
+
+    def str(self):
+        return self.decription2

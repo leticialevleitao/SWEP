@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from be_drf.models import User, Recipe
+from be_drf.models import User, Recipe, Indicacoes
 
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
@@ -10,3 +10,8 @@ class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
         fields = ['id', 'author', 'title', 'description']
+
+class IndicacoesSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Indicacoes
+        fields = ['description2', 'tipo']

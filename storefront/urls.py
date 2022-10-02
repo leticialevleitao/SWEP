@@ -2,7 +2,8 @@ from swep import views
 from django.contrib import admin
 from django.urls import path, include
 from rest_framework import routers
-from be_drf.views import UsersViewSet, RecipesViewSet
+from be_drf.views import UsersViewSet, RecipesViewSet, IndicacoesViewSet
+
 
 router = routers.DefaultRouter()
 router.register("user", UsersViewSet, basename="user")
@@ -16,5 +17,6 @@ urlpatterns = [
     path('alimentos/', views.alimentos, name = 'alimentos'),
     path('cadastro/', views.cadastro, name = 'cadastro'),
     path('login/', views.login, name = 'login'),
+    path('indicacoes/', views.indicacoes, name = 'indicacoes'),
 
 ]

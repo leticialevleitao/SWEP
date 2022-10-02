@@ -37,3 +37,20 @@ def cadastro(request):
     else:
         return render(request, 'cadastro/cadastro.html')
 
+
+def indicacoes(request):
+    if request.method == 'POST':
+        indicacoes = request.POST['indicacoes']
+
+        indicacoes_data ={
+                        "indicacoes": indicacoes,
+                    }
+
+        register_url = 'http://127.0.0.1:8000/indicacoes/'
+        result = requests.post(register_url, data=indicacoes_data)
+
+        return redirect('')
+
+    else:
+        return render(request, 'indicacoes/indicacoes.html')
+

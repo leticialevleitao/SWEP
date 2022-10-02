@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from be_drf.models import User, Recipe
-from be_drf.serializers import UserSerializer, RecipeSerializer
+from be_drf.models import User, Recipe, Indicacoes
+from be_drf.serializers import UserSerializer, RecipeSerializer, IndicacoesSerializer
 
 class UsersViewSet(viewsets.ModelViewSet):
     """
@@ -16,5 +16,13 @@ class RecipesViewSet(viewsets.ModelViewSet):
     """
     queryset = Recipe.objects.all()
     serializer_class = RecipeSerializer
+    http_method_names = ['get', 'post', 'patch', 'delete']
+
+class IndicacoesViewSet(viewsets.ModelViewSet):
+    """
+    Showing Each Indication
+    """
+    queryset = Indicacoes.objects.all()
+    serializer_class = IndicacoesSerializer
     http_method_names = ['get', 'post', 'patch', 'delete']
 

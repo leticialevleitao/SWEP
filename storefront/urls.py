@@ -10,10 +10,11 @@ router.register("recipe", RecipesViewSet, basename="recipe")
 
 
 urlpatterns = [
-    path("", include(router.urls)),
+    path("", include(router.urls), name = 'index'),
     path('admin/', admin.site.urls),
     path('swep/', include('swep.urls')),
     path('alimentos/', views.alimentos, name = 'alimentos'),
     path('cadastro/', views.cadastro, name = 'cadastro'),
+    path('login/', views.login, name = 'login'),
 
 ]

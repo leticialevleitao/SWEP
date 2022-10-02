@@ -14,5 +14,6 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('swep/', include('swep.urls')),
     path('alimentos/', views.alimentos, name = 'alimentos'),
+    path('cadastro/', views.cadastro, name = 'cadastro'),
 
 ]

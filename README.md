@@ -5,6 +5,49 @@ Tema = Pobreza (ODS1) e Segurança Alimentar (ODS2)
 
 Pergunta norteadora - 'Como podemos ofertar acesso a informações para um melhor ganho nutricional?'
 
+## **SWEP**
+
+This project represents the Backend API to feed
+the SWEP application and it's aim to FDS subject.
+
+### **Clone Project**
+```
+$ git clone https://github.com/levasl/SWEP.git && cd SWEP
+```
+
+### **Prepare Enviroment**
+
+> Here we should to make a Virtual Enviroment to run the API and installing Python and DRF libraries into this enviroment.
+```
+$ python3 -m venv venv
+```
+
+> Choose command to activate venv based on your OS
+```
+$ venv\Scripts\activate.bat // Windows
+$ source venv/bin/activate // MacOS and Linux
+```
+
+> Now we'll install the dependencies.
+```
+$ pip install -r requirements.txt
+```
+
+### **Migrate Project Models**
+```
+$ python3 manage.py migrate
+```
+
+### **Running Project**
+```
+$ python3 manage.py runserver
+```
+
+### **Accessing the Project**
+
+Access it in following link:
+http://localhost:8000/
+
 ## Status do projeto
 Protótipo lofi aprovado com 7 histórias e a criação de uma 8ª e em andamento para deploy!
 

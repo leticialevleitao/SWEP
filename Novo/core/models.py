@@ -11,6 +11,11 @@ class User(models.Model):
     def str(self):
         return self.name
 
+class Nutricionista(User):
+    crn = models.IntegerField()
+    def str(self):
+        return self.crn
+
 class Receitas(models.Model):
     titulo = models.CharField(max_length=50)
     ingredientes = models.CharField(max_length=300)

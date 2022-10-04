@@ -12,9 +12,9 @@ router.register("indicacoes", IndicacoesViewSet, basename="indicacoes")
 
 
 urlpatterns = [
-    path("", include(router.urls), name = 'index'),
+    path("banco", include(router.urls), name = 'index'),
+    path('', views.paginainicial, name = 'paginainicial'),
     path('admin/', admin.site.urls),
-    path('swep/', include('swep.urls')),
     path('alimentos/', views.alimentos, name = 'alimentos'),
     path('cadastro/', views.cadastro, name = 'cadastro'),
     path('login/', views.login, name = 'login'),

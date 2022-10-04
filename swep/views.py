@@ -3,8 +3,8 @@ from django.shortcuts import render, redirect
 import requests
 
 # Create your views here.
-def nome(request):
-    return render(request, 'nome.html', {'nome': 'SWEP'})
+def paginainicial(request):
+    return render(request, 'paginainicial/paginainicial.html')
 
 def alimentos(request): 
     return render(request, 'SWEP_HTML/SWEP.html')
@@ -51,7 +51,7 @@ def indicacoes(request):
         register_url = 'http://127.0.0.1:8000/indicacoes/'
         result = requests.post(register_url, data=indicacoes_data)
 
-        return redirect('login')
+        return redirect('')
 
     else:
         return render(request, 'indicacoes/indicacoes.html')

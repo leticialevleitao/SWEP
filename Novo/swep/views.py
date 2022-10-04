@@ -14,19 +14,19 @@ def login(request):
 
 def cadastro(request):
     if request.method == 'POST':
-        name = request.POST['nome']
+        nome = request.POST['nome']
         email = request.POST['email']
-        nickname = request.POST['nickname']
-        region = request.POST['regiao']
-        password = request.POST['password']
-        password2 = request.POST['password2']
+        usuario = request.POST['usuario']
+        regiao = request.POST['regiao']
+        senha = request.POST['senha']
+        senha2 = request.POST['senha2']
 
         user_data ={
-                        "name": name,
-                        "nick_name": nickname,
+                        "nome": nome,
+                        "usuario": usuario,
                         "email": email,
-                        "password": password,
-                        "region": region
+                        "senha": senha,
+                        "regiao": regiao
                     }
 
         register_url = 'http://127.0.0.1:8000/bancouser/'
@@ -41,10 +41,10 @@ def cadastro(request):
 def indicacoes(request):
     if request.method == 'POST':
         tipo = request.POST['tipo']
-        description2 = request.POST['description2']
+        descricao2 = request.POST['descricao2']
 
         indicacoes_data ={
-                        "description2": description2,
+                        "descricao2": descricao2,
                         "tipo": tipo,
                     }
 
@@ -60,15 +60,15 @@ def receitas(request):
     if request.method == 'POST':
         titulo = request.POST['titulo']
         ingredientes = request.POST['ingredientes']
-        description = request.POST['description']
+        descricao = request.POST['description']
 
         receitas_data ={
                         "titulo": titulo,
                         "ingredientes": ingredientes,
-                        "description": description,
+                        "descricao": descricao,
                     }
 
-        register_url = 'http://127.0.0.1:8000/bancorecipes/'
+        register_url = 'http://127.0.0.1:8000/bancoreceitas/'
         result = requests.post(register_url, data=receitas_data)
 
         return redirect('')

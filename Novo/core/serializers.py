@@ -4,7 +4,7 @@ from core.models import User, Receitas, Indicacoes
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
-        fields = ['id', 'name', 'nick_name', 'email', 'password', 'region']
+        fields = ['id', 'nome', 'usuario', 'email', 'senha', 'regiao']
 
 class ReceitasSerializer(serializers.ModelSerializer):
     class Meta:

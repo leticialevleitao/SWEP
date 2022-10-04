@@ -1,21 +1,24 @@
-"""projetoSWEP URL Configuration
-
-The `urlpatterns` list routes URLs to views. For more information please see:
-    https://docs.djangoproject.com/en/4.1/topics/http/urls/
-Examples:
-Function views
-    1. Add an import:  from my_app import views
-    2. Add a URL to urlpatterns:  path('', views.home, name='home')
-Class-based views
-    1. Add an import:  from other_app.views import Home
-    2. Add a URL to urlpatterns:  path('', Home.as_view(), name='home')
-Including another URLconf
-    1. Import the include() function: from django.urls import include, path
-    2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
-"""
+from swep import views
 from django.contrib import admin
-from django.urls import path
+from django.urls import path, include
+from rest_framework import routers
+from core.views import UsersViewSet, ReceitasViewSet, IndicacoesViewSet
+
+
+router = routers.DefaultRouter()
+router.register("user", UsersViewSet, basename="user")
+router.register("receitas", ReceitasViewSet, basename="receitas")
+router.register("indicacoes", IndicacoesViewSet, basename="indicacoes")
+
 
 urlpatterns = [
+    path("banco", include(router.urls), name = 'index'),
+    path('', views.paginainicial, name = 'paginainicial'),
     path('admin/', admin.site.urls),
+    path('alimentos/', views.alimentos, name = 'alimentos'),
+    path('cadastro/', views.cadastro, name = 'cadastro'),
+    path('login/', views.login, name = 'login'),
+    path('receitas/', views.receitas, name = 'receitas'),
+    path('indicacoesNutricionais/', views.indicacoes, name = 'indicacoesNutricionais'),
+
 ]

@@ -11,12 +11,12 @@ class User(models.Model):
         return self.name
 
 class Recipe(models.Model):
-    author = models.CharField(max_length=50)
-    title = models.CharField(max_length=200)
+    titulo = models.CharField(max_length=50)
+    ingredientes = models.CharField(max_length=300)
     description = models.TextField()
 
     def str(self):
-        return self.author
+        return self.titulo
 
 class Indicacoes(models.Model):
     description2 = models.TextField()

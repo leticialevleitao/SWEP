@@ -9,7 +9,7 @@ class UserSerializer(serializers.ModelSerializer):
 class RecipeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Recipe
-        fields = ['id', 'author', 'title', 'description']
+        fields = ['titulo', 'ingredientes', 'description']
 
 class IndicacoesSerializer(serializers.ModelSerializer):
     class Meta:

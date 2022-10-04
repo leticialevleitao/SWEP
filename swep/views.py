@@ -56,3 +56,24 @@ def indicacoes(request):
     else:
         return render(request, 'indicacoes/indicacoes.html')
 
+def receitas(request):
+    if request.method == 'POST':
+        titulo = request.POST['titulo']
+        ingredientes = request.POST['ingredientes']
+        description = request.POST['description']
+
+        receitas_data ={
+                        "titulo": titulo,
+                        "ingredientes": ingredientes,
+                        "description": description,
+                    }
+
+        register_url = 'http://127.0.0.1:8000/indicacoes/'
+        result = requests.post(register_url, data=receitas_data)
+
+        return redirect('')
+
+    else:
+        return render(request, 'indicacoes/indicacoes.html')
+
+

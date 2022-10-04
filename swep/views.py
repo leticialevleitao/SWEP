@@ -7,7 +7,7 @@ def paginainicial(request):
     return render(request, 'paginainicial/paginainicial.html')
 
 def alimentos(request): 
-    return render(request, 'SWEP_HTML/SWEP.html')
+    return render(request, 'alimentos/alimentos.html')
 
 def login(request): 
     return render(request, 'login/login.html')
@@ -29,7 +29,7 @@ def cadastro(request):
                         "region": region
                     }
 
-        register_url = 'http://127.0.0.1:8000/user/'
+        register_url = 'http://127.0.0.1:8000/bancouser/'
         result = requests.post(register_url, data=user_data)
 
         return redirect('login')
@@ -48,7 +48,7 @@ def indicacoes(request):
                         "tipo": tipo,
                     }
 
-        register_url = 'http://127.0.0.1:8000/indicacoes/'
+        register_url = 'http://127.0.0.1:8000/bancoindicacoes/'
         result = requests.post(register_url, data=indicacoes_data)
 
         return redirect('')
@@ -68,12 +68,12 @@ def receitas(request):
                         "description": description,
                     }
 
-        register_url = 'http://127.0.0.1:8000/indicacoes/'
+        register_url = 'http://127.0.0.1:8000/bancorecipes/'
         result = requests.post(register_url, data=receitas_data)
 
         return redirect('')
 
     else:
-        return render(request, 'indicacoes/indicacoes.html')
+        return render(request, 'receitas/receitas.html')
 
 

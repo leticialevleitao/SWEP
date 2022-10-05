@@ -1,0 +1,9 @@
+Django==2.2.8
+django-adminlte3==0.1.6
+django-bootstrap4==1.1.0
+django-crispy-forms==1.14.0
+sqlparse==0.3.0
+pytz==2019.3
+beautifulsoup4==4.8.1
+soupsieve==1.9.5
+sqlparse==0.3.0

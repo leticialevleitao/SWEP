@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Página Inicial</title>
+  
+  </head>
+  <body>
+    <h1>SWEP <br> Página Inicial</h1> <br><br>
+    <form action="{% url 'index' %}" method="POST"> 
+              <p> <a href ="{% url 'register' %}">Cadastrar</a>
+                <p> <a href ="indicacoesNutricionais/">Indicações Nutricionais</a>
+                  <p> <a href ="alimentos/">Alimentos</a>
+      </form>
+  </body>
+</html>

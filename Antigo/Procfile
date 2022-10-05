@@ -1,1 +1,0 @@
-web gunicorn storefront.wsgi:apllication --log--file -

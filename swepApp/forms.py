@@ -45,3 +45,27 @@ class RegisterForm(UserCreationForm):
         fields = [
             'username', 'email', 'first_name', 'last_name', 'password1', 'password2',
         ]
+
+
+class IndicacoesForm(UserCreationForm):
+    description2 = forms.CharField(
+        max_length=100,
+        required = True,
+        help_text='Digite aqui...',
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'description2'}),
+    )
+    tipo = forms.CharField(
+        max_length=200,
+        required = True,
+        help_text='Qual o tipo de informação? ',
+        widget=forms.TextInput(attrs={'class': 'form-control', 'placeholder': 'tipo'}),
+    )
+
+    
+    class Meta():
+        
+        model = UserSwep
+    
+        fields = [
+            'description2', 'tipo'
+        ]
